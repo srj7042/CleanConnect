@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Browse & Choose | CleanConnect</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background:#e9f5f4;
+}
+
+header{
+  background:#2bb3a3;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+.container{
+  padding:30px 8%;
+}
+
+.filters{
+  display:flex;
+  gap:15px;
+  margin-bottom:25px;
+  flex-wrap:wrap;
+}
+
+.filters select{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  transition:transform 0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.profile{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.profile img{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+}
+
+.profile h3{
+  font-size:18px;
+}
+
+.rating{
+  color:#f4b400;
+  font-size:14px;
+}
+
+.info{
+  margin:15px 0;
+  font-size:14px;
+  color:#555;
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  flex:1;
+  padding:10px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.view{
+  background:#e0f2f1;
+  color:#2bb3a3;
+}
+
+.select{
+  background:#2bb3a3;
+  color:white;
+}
+
+.select:hover{
+  background:#239b8f;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Browse & Choose</h1>
+  <p>Select verified helpers for your home</p>
+</header>
+
+<div class="container">
+
+  <!-- Filters -->
+  <div class="filters">
+    <select>
+      <option>Filter by Rating</option>
+      <option>4★ & above</option>
+      <option>3★ & above</option>
+    </select>
+
+    <select>
+      <option>Gender</option>
+      <option>Female</option>
+      <option>Male</option>
+    </select>
+
+    <select>
+      <option>Availability</option>
+      <option>Morning</option>
+      <option>Evening</option>
+      <option>Full Day</option>
+    </select>
+  </div>
+
+  <!-- Helper Cards -->
+  <div class="grid">
+
+    <div class="card">
+      <div class="profile">
+        <img src="https://via.placeholder.com/60" alt="Helper">
+        <div>
+          <h3>Aunty Shanti</h3>
+          <div class="rating">★★★★☆ (4.5)</div>
+        </div>
+      </div>
+      <div class="info">
+        Experience: 5+ years<br>
+        Available: Morning
+      </div>
+      <div class="buttons">
+        <button class="btn view">View Profile</button>
+        <button class="btn select">Select</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="profile">
+        <img src="https://via.placeholder.com/60" alt="Helper">
+        <div>
+          <h3>Bhaiya Raj</h3>
+          <div class="rating">★★★★★ (4.8)</div>
+        </div>
+      </div>
+      <div class="info">
+        Experience: 3+ years<br>
+        Available: Full Day
+      </div>
+      <div class="buttons">
+        <button class="btn view">View Profile</button>
+        <button class="btn select">Select</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="profile">
+        <img src="https://via.placeholder.com/60" alt="Helper">
+        <div>
+          <h3>Aunty Geeta</h3>
+          <div class="rating">★★★★☆ (4.3)</div>
+        </div>
+      </div>
+      <div class="info">
+        Experience: 7+ years<br>
+        Available: Evening
+      </div>
+      <div class="buttons">
+        <button class="btn view">View Profile</button>
+        <button class="btn select">Select</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
